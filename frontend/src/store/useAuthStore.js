@@ -86,6 +86,7 @@ toast.success("Logged in successfully");
     },
    connectSocket: () => {
     const { authUser } = get();
+    // console.log("Tero bau socket hheer", socket)
     if (!authUser || get().socket?.connected) return;
 
     const socket = io("http://localhost:4000", {
@@ -95,7 +96,7 @@ toast.success("Logged in successfully");
     });
     set({ socket: socket });
     socket.on("getOnlineUsers", (userIds) => {
-      set({ onlineUsers: userIds });
+                set({ onlineUsers: userIds });
     });
   },
 disconnectSocket:()=>{

@@ -17,7 +17,7 @@ return () => {
   unsubscribeFromMessages()
 }
   }
-}, [selectedUser,subscribeToMessages,getMessages]);
+}, [selectedUser._id,subscribeToMessages,getMessages,unsubscribeFromMessages]);
 
         if(isMessagesLoading) return (
           <div className='flex-1 flex flex-col overflow-hidden'>
