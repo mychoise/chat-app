@@ -18,6 +18,13 @@ app.use(cors({
     origin:"http://localhost:5173",
     credentials:true,
 }))
+
+app.get("/",(req,res)=>{
+    res.send({
+        message:"server is running",
+        error:false
+    })
+})
 app.use("/api/auth",authRouter)
 app.use("/api/message",msgRouter)
 app.get("/",(req,res)=>{
