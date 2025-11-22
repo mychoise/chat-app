@@ -89,7 +89,7 @@ toast.success("Logged in successfully");
     // console.log("Tero bau socket hheer", socket)
     if (!authUser || get().socket?.connected) return;
 
-    const socket = io("http://localhost:4000", {
+    const socket = io("https://chat-app-three-murex.vercel.app", {
       query: {
         userId: authUser._id,
       },
